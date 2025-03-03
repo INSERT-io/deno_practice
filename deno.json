@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "lib": ["deno.window"],
+    "strict": true
+  },
+  "tasks": {
+    "dev": "deno run --allow-read --allow-run cli.ts"
+  },
+  "lint": {
+    "files": {
+      "include": ["src/"],
+      "exclude": ["src/test/"]
+    },
+    "rules": {
+      "tags": ["recommended"],
+      "include": ["ban-untagged-todo"],
+      "exclude": ["no-unused-vars"]
+    }
+  },
+  "fmt": {
+    "files": {
+      "include": ["src/"],
+      "exclude": ["src/testdata/"]
+    },
+    "options": {
+      "useTabs": false,
+      "lineWidth": 80,
+      "indentWidth": 2,
+      "proseWrap": "preserve"
+    }
+  }
+}
